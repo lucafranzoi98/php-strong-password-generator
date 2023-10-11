@@ -2,10 +2,13 @@
 session_start();
 
 $_SESSION["number"] = $_GET["number"];
+$_SESSION["letters"] = $_GET["letters"];
+$_SESSION["numbers"] = $_GET["numbers"];
+$_SESSION["characters"] = $_GET["characters"];
 
-if($_SESSION["number"] != null){
-   header("Location: result.php");
-};
+if($_SESSION["number"] != null & ($_SESSION["letters"] != null || $_SESSION["numbers"] != null || $_SESSION["characters"] != null)){
+   header("Location: result.php");  
+}
 
 function getPassword($number) {
 	$characters = '';
