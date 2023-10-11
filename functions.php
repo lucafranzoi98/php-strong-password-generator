@@ -1,6 +1,11 @@
 <?php
+session_start();
 
-$number = $_GET["number"];
+$_SESSION["number"] = $_GET["number"];
+
+if($_SESSION["number"] != null){
+   header("Location: result.php");
+};
 
 function getPassword($number) {
 	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()';
@@ -13,4 +18,7 @@ function getPassword($number) {
 
 	return $randomString;
 }
+
+$_SESSION["password"] = getPassword($_SESSION["number"]);
+
 ?>

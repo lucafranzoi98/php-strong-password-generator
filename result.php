@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/functions.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,13 @@ include __DIR__ . "/functions.php";
 <body class="bg-dark text-white">
    <h1 class="text-center my-4">Strong Password Generator</h1>
 
-   <form method="get" class="container">
-      <div class="mb-3 d-flex align-items-center">
-         <label for="number" class="form-label me-3">Lunghezza password: </label>
-         <input type="number" class="form-control w-25" id="number" name="number" required>
-      </div>
-      <button type="submit" class="btn btn-primary me-3">Genera</button>
-      <button type="reset" class="btn btn-warning">Annulla</button>
-   </form>
+   <div class="container mt-4">
+      <h5>La tua password è:</h5>
+      <h6 class="mb-4"><?= $_SESSION["password"] ?></h6>
+      <a href="index.php">Torna indietro</a>
+   </div>
+
+   
 
 </body>
 </html>
