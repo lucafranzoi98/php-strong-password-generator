@@ -39,7 +39,21 @@ include __DIR__ . "/functions.php";
             </label>
          </div>
       </div>
+
+      <div>Consenti ripetizioni:</div>
+      <div class="form-check">         
+         <input class="form-check-input" type="radio" name="repetitions" id="repAbled" value="true" checked>
+         <label class="form-check-label" for="repAbled">
+            Sì
+         </label>
       </div>
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="radio" name="repetitions" id="repDisabled" value="false">
+         <label class="form-check-label" for="repDisabled">
+            No
+         </label>
+      </div>
+
       <button type="submit" class="btn btn-primary me-3">Genera</button>
       <button type="reset" class="btn btn-warning">Annulla</button>
    </form>
