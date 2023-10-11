@@ -8,7 +8,22 @@ if($_SESSION["number"] != null){
 };
 
 function getPassword($number) {
-	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()';
+	$characters = '';
+   $_SESSION["letters"] = $_GET["letters"];
+   $_SESSION["numbers"] = $_GET["numbers"];
+   $_SESSION["characters"] = $_GET["characters"];
+
+   if ($_SESSION["letters"] == "on") {
+      $characters .= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   }
+   
+   if ($_SESSION["numbers"] == "on") {
+      $characters .= "0123456789";
+   }
+   if ($_SESSION["characters"] == "on") {
+      $characters .= "?!@#$%^&*()";
+   }
+
 	$randomString = '';
 
 	for ($i = 0; $i < $number; $i++) {

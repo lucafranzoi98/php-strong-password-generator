@@ -18,6 +18,28 @@ include __DIR__ . "/functions.php";
          <label for="number" class="form-label me-3">Lunghezza password: </label>
          <input type="number" class="form-control w-25" id="number" name="number" required>
       </div>
+      
+      <div class="mb-3">
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="letters">
+            <label class="form-check-label" for="flexCheckDefault">
+               Lettere
+            </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="numbers">
+            <label class="form-check-label" for="flexCheckChecked">
+               Numeri
+            </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="characters">
+            <label class="form-check-label" for="flexCheckChecked">
+               Caratteri speciali
+            </label>
+         </div>
+      </div>
+      </div>
       <button type="submit" class="btn btn-primary me-3">Genera</button>
       <button type="reset" class="btn btn-warning">Annulla</button>
    </form>
