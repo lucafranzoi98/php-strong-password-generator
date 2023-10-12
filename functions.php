@@ -43,10 +43,12 @@ function getPassword() {
       // Check the unicity of random characters
       while(strlen($randomString) < $_SESSION["number"]) {
          $index = rand(0, strlen($characters) - 1);
-         if(str_contains($randomString, $index) == "false") {
+         if(str_contains($randomString, $index) == false) {
             $randomString .= $characters[$index];
          }
       }
+      
+
       
    } else{
 
